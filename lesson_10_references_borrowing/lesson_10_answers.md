@@ -307,4 +307,4 @@ fn main() {
 ✅ Deref coercion chains
 ✅ Practical patterns: inspect, modify in place, return slices
 
-**Up next:** Lesson 11 — Lifetimes 🦀
+**Up next:** [Lesson 11 — References & Borrowing](../lesson_10_references/lesson_10_references.md) 🦀

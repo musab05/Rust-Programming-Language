@@ -375,4 +375,4 @@ You've mastered:
 - ✅ `mem::swap` and `mem::replace` for in-place modification
 - ✅ Preferring borrowing over cloning for efficiency
 
-**Up next:** [Lesson 10 — References & Borrowing](../lesson_10_references/lesson_10_references.md) 🦀
+**Up next:** [Lesson 10 — References](../lesson_10_references_borrowing/lesson_10_references.md) 🦀
