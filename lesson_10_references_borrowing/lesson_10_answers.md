@@ -5,10 +5,13 @@
 ## Section A — Will It Compile?
 
 ### A1 — Yes ✅
+
 Multiple immutable references simultaneously — allowed. All of `r1`, `r2`, `r3`, and `s` are valid.
 
 ### A2 — No ❌
+
 Two simultaneous mutable borrows of `s` — data race risk. Fix:
+
 ```rust
 fn main() {
     let mut s = String::from("hello");
@@ -20,15 +23,19 @@ fn main() {
 ```
 
 ### A3 — Yes ✅ (NLL)
+
 After the `println!("{r1} {r2}")`, the immutable borrows end (last use). The `&mut` borrow is then allowed.
 
 ### A4 — No ❌
+
 Returns a reference to `s` which is dropped at function return — dangling. Fix: return `String`.
 
 ### A5 — No ❌
+
 `&data[0]` immutably borrows `data`. `data.push(4)` requires mutable borrow — conflict. Fix: copy the value: `let first = data[0];`
 
 ### A6 — Yes ✅
+
 `s.clone()` creates an independent `String`. No borrow conflict. Output: `"hihi"`.
 
 ---
@@ -36,21 +43,26 @@ Returns a reference to `s` which is dropped at function return — dangling. Fix
 ## Section B — Predict the Output
 
 ### A7
+
 `hello!!` — two pushes of `'!'`.
 
 ### A8
+
 ```
 hello
 hello world
 ```
+
 Slice borrows `s` — `s` remains valid.
 
 ### A9
+
 ```
 15
 60
 9
 ```
+
 sum of arr=15, sum of vec=60, sum of arr[1..4]=2+3+4=9.
 
 ---
@@ -58,6 +70,7 @@ sum of arr=15, sum of vec=60, sum of arr[1..4]=2+3+4=9.
 ## Section C — Fix the Bugs
 
 ### A10
+
 ```rust
 fn main() {
     let mut s = String::from("hello");
@@ -68,6 +81,7 @@ fn main() {
 ```
 
 ### A11
+
 ```rust
 fn main() {
     let mut s = String::from("hello");
@@ -80,6 +94,7 @@ fn main() {
 ```
 
 ### A12
+
 ```rust
 fn main() {
     let mut numbers = vec![10, 20, 30];
@@ -90,6 +105,7 @@ fn main() {
 ```
 
 ### A13
+
 ```rust
 fn print_length(s: &str) { println!("Length: {}", s.len()); }
 fn main() {
@@ -105,6 +121,7 @@ fn main() {
 ## Section D — Write It Yourself
 
 ### A14 — count_uppercase
+
 ```rust
 fn count_uppercase(s: &str) -> usize {
     s.chars().filter(|c| c.is_uppercase()).count()
@@ -117,6 +134,7 @@ fn main() {
 ```
 
 ### A15 — remove_spaces
+
 ```rust
 fn remove_spaces(s: &mut String) { s.retain(|c| c != ' '); }
 fn main() {
@@ -128,6 +146,7 @@ fn main() {
 ```
 
 ### A16 — first_word
+
 ```rust
 fn first_word(s: &str) -> &str {
     match s.find(' ') { Some(i) => &s[..i], None => s }
@@ -142,6 +161,7 @@ fn main() {
 ```
 
 ### A17 — stats
+
 ```rust
 fn stats(data: &[f64]) -> (f64, f64, f64) {
     let min  = data.iter().cloned().fold(f64::INFINITY, f64::min);
@@ -159,6 +179,7 @@ fn main() {
 ```
 
 ### A18 — replace_first
+
 ```rust
 fn replace_first(v: &mut Vec<String>, new_val: &str) {
     if !v.is_empty() { v[0] = new_val.to_string(); }
@@ -172,6 +193,7 @@ fn main() {
 ```
 
 ### A19 — Struct references
+
 ```rust
 struct Student { name: String, grade: u32 }
 fn get_name(s: &Student) -> &str { &s.name }
@@ -186,6 +208,7 @@ fn main() {
 ```
 
 ### A20 — Full analysis program
+
 ```rust
 fn word_count(s: &str) -> usize { s.split_whitespace().count() }
 
@@ -221,18 +244,20 @@ fn main() {
 ## Section E — Deep Understanding
 
 ### A21 — True or False?
-| # | Answer | Explanation |
-|---|--------|-------------|
-| 1 | **True** | Any number of `&T` — read-only, no conflict |
-| 2 | **False** | `&mut T` while `&T` exists in scope — forbidden |
-| 3 | **False** | `&str` borrows data; it does NOT own it |
-| 4 | **False** | Borrow checker is compile-time only |
-| 5 | **False** | Local dropped at return — dangling reference — compile error |
-| 6 | **True** | NLL: borrows end at last use, not at `}` |
-| 7 | **True** | Deref coercion: `&Vec<i32>` → `&[i32]` |
-| 8 | **False** | `&mut T` requires the variable to be declared `mut` |
+
+| #   | Answer    | Explanation                                                  |
+| --- | --------- | ------------------------------------------------------------ |
+| 1   | **True**  | Any number of `&T` — read-only, no conflict                  |
+| 2   | **False** | `&mut T` while `&T` exists in scope — forbidden              |
+| 3   | **False** | `&str` borrows data; it does NOT own it                      |
+| 4   | **False** | Borrow checker is compile-time only                          |
+| 5   | **False** | Local dropped at return — dangling reference — compile error |
+| 6   | **True**  | NLL: borrows end at last use, not at `}`                     |
+| 7   | **True**  | Deref coercion: `&Vec<i32>` → `&[i32]`                       |
+| 8   | **False** | `&mut T` requires the variable to be declared `mut`          |
 
 ### A22 — Trace the borrows
+
 ```
 a = &v          → immutable borrow starts
 println!(a)     → last use of a → borrow ENDS (NLL)
@@ -243,9 +268,11 @@ c = &v          → immutable borrow (safe — b ended)
 d = &v          → second immutable borrow (fine)
 println!(c, d)  → both end
 ```
+
 **Compiles: Yes ✅** — NLL handles this cleanly.
 
 ### A23 — Big Debug Challenge (8 bugs)
+
 ```rust
 fn first_word(s: &str) -> &str {         // fix 1: borrow, not own
     match s.find(' ') { Some(i) => &s[..i], None => s }
@@ -298,6 +325,7 @@ fn main() {
 ---
 
 ## 🏆 Lesson Complete!
+
 ✅ References `&T` and mutable references `&mut T`
 ✅ Borrowing rules: multiple `&T` OR one `&mut T`
 ✅ Borrow checker — compile-time, zero runtime cost
@@ -307,4 +335,4 @@ fn main() {
 ✅ Deref coercion chains
 ✅ Practical patterns: inspect, modify in place, return slices
 
-**Up next:** [Lesson 11 — References & Borrowing](../lesson_10_references/lesson_10_references.md) 🦀
+**Up next:** [Lesson 11 — Slices](../lesson_11_slices/lesson_11_slices.md) 🦀
