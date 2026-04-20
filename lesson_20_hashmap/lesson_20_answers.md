@@ -365,4 +365,4 @@ fn main() {
 ✅ Common patterns: counting, grouping, inverting, memoising  
 ✅ Word frequency counter — roadmap practice ✓  
 
-**Up next: Lesson 21 — panic! & unwrap 🦀**
+**Up next: [Lesson 21 — panic! & unwrap](../lesson_21_panic_unwrap/lesson_21_panic_unwrap.md) 🦀**
