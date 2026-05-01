@@ -3,7 +3,7 @@
 > **Series:** Rust From Zero · Intermediate Level begins!  
 > **Roadmap ID:** O5 · Category: 🧠 Ownership  
 > **Previous:** [Lesson 29 — File I/O & std::io](../lesson_29_file_io/lesson_29_file_io.md)  
-> **Next:** Lesson 31 — Lifetimes in Structs & Advanced *(coming soon)*  
+> **Next:** [Lesson 31 — Lifetimes in Structs & Advanced](../lesson_31_lifetimes_advanced/lesson_31_lifetimes_advanced.md)  
 > **Practice:** [Questions](./lesson_30_questions.md) · [Answers](./lesson_30_answers.md)  
 > **Practice Task:** Annotate lifetimes on a fn returning the longer of two `&str`
 
