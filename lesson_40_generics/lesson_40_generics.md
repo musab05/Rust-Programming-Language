@@ -3,7 +3,7 @@
 > **Series:** Rust From Zero · Intermediate Level  
 > **Roadmap ID:** T3 · Category: 🔷 Traits  
 > **Previous:** [Lesson 39 — Trait Bounds](../lesson_39_trait_bounds/lesson_39_trait_bounds.md)  
-> **Next:** Lesson 41 — Generics in Structs & Enums *(coming soon)*  
+> **Next:** [Lesson 41 — Generics in Structs & Enums](../lesson_41_generic_structs/lesson_41_generic_structs.md)  
 > **Practice:** [Questions](./lesson_40_questions.md) · [Answers](./lesson_40_answers.md)  
 > **Practice Task:** Generic Stack\<T\> with push/pop/peek
 
