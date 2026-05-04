@@ -3,7 +3,7 @@
 > **Series:** Rust From Zero · Intermediate Level  
 > **Roadmap ID:** CL3 · Category: 🔒 Closures  
 > **Previous:** [Lesson 49 — Fn, FnMut, FnOnce](../lesson_49_fn_traits/lesson_49_fn_traits.md)  
-> **Next:** Lesson 51 — Smart Pointers: Box *(coming soon)*  
+> **Next:** [Lesson 51 — Smart Pointers: Box](../lesson_51_box/lesson_51_box.md)  
 > **Practice:** [Questions](./lesson_50_questions.md) · [Answers](./lesson_50_answers.md)  
 > **Practice Task:** Build a function pipeline combinator
 
