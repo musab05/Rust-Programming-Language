@@ -3,7 +3,7 @@
 > **Series:** Rust From Zero · Intermediate Level  
 > **Roadmap ID:** CC2 · Category: ⚡ Concurrency  
 > **Previous:** [Lesson 54 — Threads & spawn](../lesson_54_threads/lesson_54_threads.md)  
-> **Next:** Lesson 56 — Shared State: Mutex & RwLock *(coming soon)*  
+> **Next:** [Lesson 56 — Shared State: Mutex & RwLock](../lesson_56_mutex_rwlock/lesson_56_mutex_rwlock.md)  
 > **Practice:** [Questions](./lesson_55_questions.md) · [Answers](./lesson_55_answers.md)  
 > **Practice Task:** Build a multi-producer logging system
 
