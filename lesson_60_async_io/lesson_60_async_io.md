@@ -3,7 +3,7 @@
 > **Series:** Rust From Zero · Advanced Level  
 > **Roadmap ID:** AS3 · Category: 🌐 Async  
 > **Previous:** [Lesson 59 — Tokio Runtime](../lesson_59_tokio/lesson_59_tokio.md)  
-> **Next:** Lesson 61 — Unsafe Rust *(coming soon)*  
+> **Next:** [Lesson 61 — Unsafe Rust](../lesson_61_unsafe/lesson_61_unsafe.md)  
 > **Practice:** [Questions](./lesson_60_questions.md) · [Answers](./lesson_60_answers.md)  
 > **Practice Task:** Build a TCP echo server with async I/O
 
