@@ -3,7 +3,7 @@
 > **Series:** Rust From Zero · Advanced Level  
 > **Roadmap ID:** AL1 · Category: 🧬 Advanced Patterns  
 > **Previous:** [Lesson 64 — FFI](../lesson_64_ffi/lesson_64_ffi.md)  
-> **Next:** Lesson 66 — Advanced Traits & Type-Level Programming *(coming soon)*  
+> **Next:** [Lesson 66 — Advanced Traits](../lesson_66_advanced_traits/lesson_66_advanced_traits.md)  
 > **Practice:** [Questions](./lesson_65_questions.md) · [Answers](./lesson_65_answers.md)  
 > **Practice Task:** Work through complex lifetime scenarios including HRTB and subtyping
 
