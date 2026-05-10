@@ -1,9 +1,8 @@
 # 📘 Lesson 101 — Memory-Mapped Registers & SVD2Rust (EM3)
 
-> **Series:** Rust From Zero · Expert Level (Final Lesson! 🏆)  
+> **Series:** Rust From Zero · Expert Level  
 > **Roadmap ID:** EM3 · Category: 🔩 Embedded  
 > **Previous:** [Lesson 100 — Embedded HAL Pattern](../lesson_100_embedded_hal/lesson_100_embedded_hal.md)  
-> **Next:** 🎉 **You've completed the entire Rust roadmap!**  
 > **Practice:** [Questions](./lesson_101_questions.md) · [Answers](./lesson_101_answers.md)
 
 ---
@@ -276,23 +275,6 @@ ECOSYSTEM LAYERS
 ────────────────────────────────────────────────────────────
 SVD → PAC → HAL → Driver → Application
 ```
-
----
-
-## 🎉 Congratulations!
-
-**You've completed ALL 101 lessons of the Rust Master Roadmap!**
-
-From "Hello, World!" to memory-mapped registers — you now have a comprehensive understanding of Rust across all tiers:
-
-| Tier | Lessons | Topics |
-|---|---|---|
-| 🟢 Beginner | 1–25 | Variables, ownership, structs, enums, error handling |
-| 🟡 Intermediate | 26–55 | Lifetimes, iterators, traits, generics, closures, async |
-| 🟠 Advanced | 56–95 | Smart pointers, macros, FFI, patterns, web, databases |
-| 🔴 Expert | 96–101 | Inline ASM, proc macros, SIMD, embedded, bare metal |
-
-**Keep coding, keep learning, keep Rusting! 🦀🏆**
 
 ---
 
