@@ -1,9 +1,8 @@
 # 📘 Lesson 101 — Memory-Mapped Registers & SVD2Rust (EM3)
 
-> **Series:** Rust From Zero · Expert Level (Final Lesson! 🏆)  
+> **Series:** Rust From Zero · Expert Level  
 > **Roadmap ID:** EM3 · Category: 🔩 Embedded  
 > **Previous:** [Lesson 100 — Embedded HAL Pattern](../lesson_100_embedded_hal/lesson_100_embedded_hal.md)  
-> **Next:** 🎉 **You've completed the entire Rust roadmap!**  
 > **Practice:** [Questions](./lesson_101_questions.md) · [Answers](./lesson_101_answers.md)
 
 ---
