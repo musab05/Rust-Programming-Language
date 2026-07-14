@@ -1,7 +1,6 @@
 # 📘 Lesson 04 — Functions in Rust
 
 > **Series:** Learning Rust from Scratch
-> **Difficulty:** Beginner → Intermediate
 > **Prerequisite:** [Lesson 03 — Compound Types](../lesson_03/lesson_03_compound_types.md)
 >
 > **Files in this lesson:**
